@@ -14,7 +14,7 @@ def main():
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('dog_cat_classifier.hdf5')
+        model = keras.models.load_model('dog_cat_classifier.hdf5')
         return model
     
     def import_and_predict(image_data, model):
