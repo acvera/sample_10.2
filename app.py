@@ -6,8 +6,8 @@ import cv2
 
 def main():
     # set up the Streamlit app
-    st.write("Name: Alexia Jose M. Roque")
-    st.write("Section: CPE32S6")
+    st.write("Name: Trial")
+    st.write("Section: CPE32S2")
     st.title("Dogs and Cats Classifier 🐶🐱")
     st.write("This app classifies whether an uploaded image contains a dog or a cat using a pre-trained convolutional neural network model.")
     st.write("### Dogs 🐕‍🦺, Cats 🐈")
@@ -19,7 +19,7 @@ def main():
     
     def import_and_predict(image_data, model):
         size=(128,128)
-        image = ImageOps.fit(image_data,size, Image.LANCZOS)
+        image = ImageOps.fit(image_data,size)
         image = np.asarray(image)
         image = image / 255.0
         img_reshape = np.reshape(image, (1, 128, 128, 3))
